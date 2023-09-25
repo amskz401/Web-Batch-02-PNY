@@ -1,3 +1,5 @@
 https://www.w3schools.com/html/html_intro.asp
 
 https://www.sublimetext.com/download
+
+https://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/codeblocks-20.03mingw-setup.exe/download
