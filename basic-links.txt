@@ -1,9 +1,6 @@
+Text Editor: https://www.sublimetext.com/
+
+For practice use this site
+https://replit.com/
+
 https://www.w3schools.com/html/html_intro.asp
-
-https://www.sublimetext.com/download
-
-<<<<<<< HEAD
-https://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/codeblocks-20.03mingw-setup.exe/download
-=======
-https://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/codeblocks-20.03mingw-setup.exe/download
->>>>>>> 5c425a7b9de15582cbfb3ba66416a2d98ae28e63
