@@ -1,0 +1,27 @@
+p.para {
+    font-size: 15px;
+    color: green !important;
+    font-weight: 800;
+    background-color: gray;
+}
+#para-id {
+    font-size: 20px;
+    color: aqua !important;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+p#new-para-id{
+	color: green;
+}
+p.new-para {
+    color: blue;
+}
+p.new-para {
+    color: aqua;
+}
+
+span.first_letter {
+    color: blue;
+    font-size: 50px;
+}

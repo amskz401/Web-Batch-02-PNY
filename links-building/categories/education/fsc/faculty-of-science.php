@@ -10,6 +10,7 @@ $base_dir = $_SERVER['DOCUMENT_ROOT'].'/links-building/menu.php';
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>links-building/assets/css/style.css">
 </head>
 <body>
 	<p><h1><center>Faculty Of Science</center></h1></p>
