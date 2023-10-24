@@ -1,0 +1,73 @@
+/* Global Style */
+
+* {
+	font-family: cursive;
+	font-size: 12px;
+	margin: 0px;
+}
+
+
+header {
+    background-color: #e2366e;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    min-height: 800px;
+}
+.row {
+    width: 100%;
+    margin-top: 25px;
+}
+.col-left {
+    width: 25%;
+    float: left;
+}
+.col-right {
+    width: 75%;
+    float: left;
+}
+.col-left p {
+    border: 1px solid #415555;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* width: 100%; */
+    background: lightblue;
+    padding: 10px;
+}
+.col-right h1{
+	padding-left: 25px;
+}
+
+.col-right p{
+	padding-left: 25px;
+	margin-bottom: 25px;
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+/*
+Percenter of gloabl style
+REM: Root Element style 1, 2, 3 => times
+.row p {
+    text-decoration: underline;
+    font-size: 300%;
+    font-size: 1.5rem;
+}
+
+
+Apply only parent element style
+p.element-exp b {
+    font-size: 2em;
+    font-size: 300%;
+}
+*/
