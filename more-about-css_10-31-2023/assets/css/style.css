@@ -1,0 +1,199 @@
+/* Global Style Start */
+* {
+	font-family: cursive;
+	font-size: 12px;
+	margin: 0px;
+}
+/* Global Style End */
+
+/*body {
+    background-image: url(https://img.freepik.com/free-vector/bokeh-defocused-background_23-2148497833.jpg?w=2000);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: left, center, right;
+}*/
+p.add-bg-image {
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/015/314/479/small/abstract-modern-elegant-blue-gold-frame-border-social-media-free-png.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 25px;
+}
+header {
+    background-color: #e2366e;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    height: 70px;
+    align-items: center;
+}
+nav ul li:first-child {
+    margin-right: auto;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    min-height: 800px;
+}
+
+.row {
+    width: 100%;
+    margin-top: 25px;
+}
+.col-left {
+    width: 25%;
+    float: left;
+}
+.col-right {
+    width: 75%;
+    float: left;
+}
+.col-left p {
+    border: 1px solid #415555;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* width: 100%; */
+    background: lightblue;
+    padding: 10px;
+}
+.col-right h1{
+	padding-left: 25px;
+}
+
+.col-right p{
+	padding-left: 25px;
+	margin-bottom: 25px;
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+/*
+Percenter of gloabl style
+REM: Root Element style 1, 2, 3 => times
+.row p {
+    text-decoration: underline;
+    font-size: 300%;
+    font-size: 1.5rem;
+}
+
+
+Apply only parent element style
+p.element-exp b {
+    font-size: 2em;
+    font-size: 300%;
+}
+*/
+
+/* Form Page CSS Start  */
+.form-page {
+    background-color: #cde5e5;
+}
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+form {
+    /* border: 4px solid rgb(42 29 239 / 34%); */
+    padding: 10px;
+    margin-top: 25px;
+    width: 50%;
+    margin: auto;
+}
+.input-group label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.input-group input.input-tag {
+    width: 96%;
+    height: 32px;
+    padding-left: 2%;
+    padding-right: 2%;
+    /* margin-left: -15px; */
+    /* margin-right: -15px; */
+}
+input.submit-btn {
+    padding: 5px 25px;
+    font-size: 20px;
+    margin-top: 25px;
+    border-top: 4px solid red;
+    border-right: 4px solid green;
+    border-bottom: 4px solid blue;
+    border-left: 4px solid;
+    background-color: aqua;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    cursor: pointer;
+}
+
+/* Form Page CSS End  */
+
+
+.col-left img {
+    box-shadow: 0px 0px 20px blue;
+}
+/*.col-right {
+    background-color: blue;
+    color: white;
+}
+
+.col-right {
+    width: 75%;
+    float: left;
+    background-image: url(https://pngimg.com/d/mario_PNG125.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 35px 50px;
+}*/
+
+.box {
+    width: 200px;
+    height: 100px;
+    border: 2px solid;
+    display: flex;
+}
+
+.row.row-flex {
+    display: flex;
+    /* display: inline-flex; */
+    /* display: -webkit-box; */
+    gap: 20px;
+}
+
+.box.b1 {
+    background-image: linear-gradient(red, green, blue);
+}
+
+.box.b2 {
+    background-image: linear-gradient(to right, red, green, blue);
+}
+.box.b3 {
+    background-image: linear-gradient(to top, red, green, blue);
+}
+.box.b4 {
+    background-image: linear-gradient(44deg, black, red, green);
+}
+.box.b5 {
+    background-image: linear-gradient(to top, aqua, orange);
+}
+.box.b6 {
+    /* box-shadow: inset 0 0 20px blue; */
+    background-image: linear-gradient(45deg, black 10%, transparent);
+}
