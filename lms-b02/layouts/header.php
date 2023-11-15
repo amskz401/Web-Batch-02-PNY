@@ -22,7 +22,7 @@
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href=""><i class="bi bi-exclamation-circle"></i> Computer Science</a>
+							<a class="nav-link active" aria-current="page" href=""><i class="bi/ bi-exclamation-circle"></i> Computer Science</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link active" aria-current="page" href="logout.php">Physics</a>
@@ -47,7 +47,8 @@
 					</ul>
 					<form class="d-flex" role="search">
 						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-						<button class="btn btn-outline-dark btn-primary" type="submit">Search</button>
+						<i class="bi bi-search"></i>
+						<!-- <button class="btn btn-outline-dark btn-primary" type="submit">Search</button> -->
 					</form>
 				</div>
 			</div>
