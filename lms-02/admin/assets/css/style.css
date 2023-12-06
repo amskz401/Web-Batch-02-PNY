@@ -122,3 +122,6 @@
   .navbar .form-control {
     padding: .75rem 1rem;
   }
+  .sidebar.border.border-right.col-md-3.col-lg-2.p-0.bg-body-tertiary {
+    min-height: 100dvh;
+}

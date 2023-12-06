@@ -12,6 +12,10 @@
                     <label for="username">Last Name</label>
                     <input type="text" class="form-control" required>
                 </div>
+                <div class="form-gruop">
+                    <label for="">Profile Image</label>
+                    <input type="file" name="profile" class="form-control" required>
+                </div>
                 <div class="form-group">
                     <label for="username">Phone</label>
                     <input type="text" class="form-control" required>
@@ -24,16 +28,8 @@
                     <label for="password">Password</label>
                     <input type="password" class="form-control" required>
                 </div>
-                <div class="form-group mt-4">
-                    <a href="register.php" class="link">Register Here</a>
-                    <span class="float-end">
-                        <input type="checkbox"> Remember Me
-                    </span>
-                    
-                </div>
-                <div class="form-group mt-4">
-                    <a href="reset-password.php" class="link">Forgot Password Click Here</a>
-                </div>
+                
+               
                 <input type="submit" class="btn btn-primary mt-4">
 
             </form>

@@ -1,0 +1,52 @@
+CRUD ==> {
+	Create (insert), Retrieve (select), Update, Delete 
+}
+
+
+SELECT * FROM `users` WHERE 1
+
+-------
+
+SELECT id, username FROM `users` WHERE 1;
+
+-------
+
+SELECT id, username FROM `users` WHERE Id = 1;
+
+-------
+
+SELECT id, username FROM `users` WHERE Id = 1 and username='pnyuser';
+
+--------
+
+SELECT id, username FROM `users` WHERE Id = 1 or username='pnyuser123';
+
+--------
+
+SELECT id, username FROM `users` WHERE (Id = 1 AND username = 'pnyusekjkkjr') OR username = 'pnyuser';
+
+--------
+
+INSERT INTO `users`(`Id`, `username`, `password`, `reset_link`, `is_active`, `created_date`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]')
+
+INSERT INTO `users`(`username`, `password`) VALUES ('pnyedit','password');
+
+---------
+
+UPDATE `users` SET `is_active`='1' WHERE `Id` = 1
+
+---------
+
+DELETE FROM `users` WHERE id = 1
+
+--------
+
+Diff b/w truncate and delete
+
+--------
+
+SELECT * FROM `users` LIMIT 0, 10;
+
+--------
+
+SELECT * FROM `users` ORDER BY id asc

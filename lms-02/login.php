@@ -8,19 +8,17 @@
                     <label for="username">Username/Email</label>
                     <input type="text" class="form-control" required>
                 </div>
-                <div class="form-group mt-4">
+ <div class="form-group mt-4">
                     <label for="password">Password</label>
                     <input type="password" class="form-control" required>
                 </div>
-                <div class="form-group mt-4">
-                    <a href="register.php" class="link">Register Here</a>
-                    <span class="float-end">
+       <div class="form-group mt-4">
+                    <a href="register.php" class="link">Register Here</a>           <span class="float-end">
                         <input type="checkbox"> Remember Me
-                    </span>
+       </span>
                     
                 </div>
-                <div class="form-group mt-4">
-                    <a href="reset-password.php" class="link">Forgot Password Click Here</a>
+                <div class="form-group mt-4"         <a href="reset-password.php" class="link">Forgot Password Click Here</a>
                 </div>
                 <input type="submit" class="btn btn-primary mt-4">
 
