@@ -1,0 +1,38 @@
+MySQL ==>
+	
+	CRUD
+	Create(Insert), Retrive(Select), Update, Delete
+
+	// Selection cases
+
+	SELECT * FROM `users` WHERE 1
+	SELECT `id`, `username`, `email`, `password` FROM `users` WHERE 1;
+	SELECT * FROM `users` WHERE `id` = 1;
+	SELECT * FROM `users` WHERE `id` = 1 AND username = 'test12';
+	SELECT * FROM `users` WHERE `id` = 5 OR username = 'test';
+	select * FROM `users` WHERE status = 0 and (`id` = 5 OR username = 'test');
+	select * FROM `users` WHERE id >= 1;
+	select * FROM `users` WHERE id != 1;
+	select * FROM `users` WHERE username is null;
+
+	----------
+
+	INSERT INTO `users`(`username`, `email`, `password`)VALUES ('fromphp','fromphp@ma.com','fromphppassword')
+
+	----------
+
+	Order By ASC/DESC/RANDOM
+	SELECT * FROM `users` ORDER BY id ASC;
+	SELECT * FROM `users` ORDER BY id DESC;
+	SELECT * FROM `users` ORDER BY RAND();
+
+	----------
+	Update Record
+	UPDATE `users` SET `username`='updated' WHERE `id` = 1;
+
+	----------
+
+	Delete Record
+	DELETE FROM `users` WHERE `id` = 6
+
+
