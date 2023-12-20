@@ -1,4 +1,9 @@
-<?php include('layouts/header.php'); session_start(); ?>
+<?php include('layouts/header.php'); 
+if(isset($_SESSION['user'])) { 
+    header("Location: http://localhost/library-ms/");
+}
+
+?>
 <div class="container">
     <div class="row">
         <h1 class="text-center mt-5 pt-5">Register</h1>
@@ -12,7 +17,7 @@
                 } ?>
                 <div class="form-group">
                     <label for="username">First Name</label>
-                    <input type="text" class="form-control" required name="first_name">
+                    <input type="text" class="form-control" required name="first_name" value="<?= isset($_SESSION['input']['first_name'])?$_SESSION['input']['first_name']:''; ?>">
                     <?php if(isset($_SESSION['error']['first_name'])) {
                         echo '<small class="error">'.$_SESSION['error']['first_name'].'</small>';
                         unset($_SESSION['error']['first_name']);
@@ -20,7 +25,7 @@
                 </div>
                 <div class="form-group">
                     <label for="username">Last Name</label>
-                    <input type="text" class="form-control" required name="last_name">
+                    <input type="text" class="form-control" required name="last_name" value="<?= isset($_SESSION['input']['last_name'])?$_SESSION['input']['last_name']:''; ?>">
                 </div>
                 <!-- <div class="form-gruop">
                     <label for="">Profile Image</label>
@@ -42,6 +47,10 @@
                 <div class="form-group">
                     <label for="username">Email</label>
                     <input type="email" class="form-control" required name="email">
+                    <?php if(isset($_SESSION['error']['email'])) {
+                        echo '<small class="error">'.$_SESSION['error']['email'].'</small>';
+                        unset($_SESSION['error']['email']);
+                    } ?>
                 </div>
 
                 <div class="form-group mt-4">
@@ -49,7 +58,7 @@
                     <input type="password" class="form-control" required name="password">
                 </div>
                 
-               
+                <input type="hidden" name="is_register" value="1">
                 <input type="submit" class="btn btn-primary mt-4">
 
             </form>

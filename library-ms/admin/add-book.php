@@ -9,7 +9,7 @@
 
             <div class="row">
                 <div class="col-md-8 mx-auto">
-                    <form action="">
+                    <form action="process/books.php" method="post" enctype="multipart/form-data">
                         <div class="form-group mb-4">
                             <label for=""><strong>Book Title</strong></label>
                             <input type="text" class="form-control" placeholder="Enter Title Here" name="book-title">
@@ -24,7 +24,7 @@
                         </div>
                         <div class="form-group mb-4">
                             <label for=""><strong>Book Release Date</strong></label>
-                            <input type="text" class="form-control" name="book-author" id="date-picker" readonly>
+                            <input type="text" class="form-control" name="book-rdate" id="date-picker" readonly>
                         </div>
                         <div class="form-group mb-4">
                             <label for=""><strong>Book Description</strong></label>
@@ -42,6 +42,7 @@
                             <label for=""><strong>Rack</strong></label>
                             <input type="number" class="form-control" name="rack">
                         </div>
+                        <input type="hidden" name="is_new" value="1">
                         <input type="submit" value="Add Book" class="btn btn-success btn-block col-md-3">
                     </form>
                 </div>

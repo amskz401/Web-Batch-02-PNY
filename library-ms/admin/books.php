@@ -1,4 +1,6 @@
 <?php include("layouts/header.php") ?>
+<?php require_once ("classes/book.class.php"); ?>
+<?php $bookOBJ = new Book(); ?>
 
 <div class="container-fluid">
   <div class="row">
@@ -25,66 +27,18 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php foreach ($bookOBJ->getBooks() as $key => $value) { ?>
                         <tr>
-                            <th scope="row"><img src="" alt=""></th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <th scope="row"><?= $value['id']; ?></th>
+                            <td><?= $value['title'] ?></td>
+                            <td><?= $value['author'] ?></td>
+                            <td><?= $value['publish_date']; ?></td>
                             <td>
-                                <a href="edit-book.php" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
-                                <a href="delete-book.php" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
+                                <a href="edit-book.php?book_id=<?= $value['id']; ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
+                                <a href="process/books.php?delete_id=<?= $value['id']; ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
-                        <tr>
-                            <th scope="row"><img src="" alt=""></th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>
-                                <a href="edit-book.php" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
-                                <a href="delete-book.php" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><img src="" alt=""></th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>
-                                <a href="edit-book.php" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
-                                <a href="delete-book.php" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><img src="" alt=""></th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>
-                                <a href="edit-book.php" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
-                                <a href="delete-book.php" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><img src="" alt=""></th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>
-                                <a href="edit-book.php" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
-                                <a href="delete-book.php" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><img src="" alt=""></th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>
-                                <a href="edit-book.php" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
-                                <a href="delete-book.php" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
-                            </td>
-                        </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>
