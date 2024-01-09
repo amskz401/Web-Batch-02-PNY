@@ -9,9 +9,9 @@ use App\Models\Product;
 class FrontViewController extends Controller
 {
     public function getProducts() {
-        $products = Product::paginate(12);
+        $products = Product::all();
         $data['title'] = "Product Page";
         $data['products'] = $products;
-        return view("products", $data);
+        return view("index", $data);
     }
 }
