@@ -52,7 +52,7 @@
                 </li>
                 @endguest
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('shopping-cart.page') }}">{{ __('Cart') }}</a>
+                    <a class="nav-link" href="{{ route('shopping-cart.page') }}"><i class="bi bi-cart-fill"></i></a>
                 </li>
             </ul>
         </div>
