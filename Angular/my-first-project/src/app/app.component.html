@@ -1,16 +1,50 @@
 <app-navbar></app-navbar>
 
-<div class="container">
+<!-- <div class="container">
   <div class="row">
     <div class="col-md-12 text-center mt-5">
-      <button (click)="youclick()" class="btn btn-success">CLick Me {{timer}}</button>
+      <button (click)="counterFunc('+')" class="btn btn-success">+</button>
+      <button (click)="counterFunc('-')" class="btn btn-success">-</button>
+      <button (click)="startCounter()" class="btn btn-success">Click Me {{timer}}</button>
+      <h1>{{timerMsg}}</h1>
+      
+      <ul *ngIf="timer == 5; else showOL">
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+      </ul>
+
+      <ng-template #showOL>
+        <ol>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+        </ol>
+      </ng-template>
+
+      <container-element [ngSwitch]="timer">
+        <h1 *ngSwitchCase="1">Timer value 1</h1>
+        <h1 *ngSwitchCase="2">Timer value 2</h1>
+        <h1 *ngSwitchCase="3">Timer value 3</h1>
+        <h1 *ngSwitchCase="4">Timer value 4</h1>
+        <h1 *ngSwitchCase="5">Timer value 5</h1>
+
+      </container-element>
+
+      <ul *ngFor="let student of students let i = index">
+        <li> {{i}} - {{student.id}} - {{student.name}} </li>
+      </ul>
+
+
 <h1>
   {{counter}}
 </h1>
 <h2>{{succText}}</h2>
     </div>
   </div>
-</div>
+</div> -->
 
 <router-outlet></router-outlet>
 

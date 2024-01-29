@@ -10,26 +10,43 @@ export class AppComponent {
   title = 'my-first-project';
   counter = 0;
   succText = '';
-  timer = 0;
+  timer = 10;
+  timerMsg = '';
+  students = [
+    {id: 1, name: "Jado"},
+    {id: 2, name: "PNY"},
+    {id: 3, name: "Multan"}
+  ];
   constructor() {
-    setTimeout(() => {
-      this.timer = 15214;
-    }, 2000);
+    // setTimeout(() => {
+    //   this.timer = 15214;
+    // }, 2000);
 
-    setInterval(() => {
+    // setInterval(() => {
       
-      ++this.timer;
-    }, 3000);
+    //   ++this.timer;
+    // }, 3000);
   }
 
-  youclick() {
-    ++this.counter;
-    if(this.counter == 5) {
-      this.succText = "You hit button 5 times"
-    } 
-    else if(this.counter == 10) {
-      this.succText = "You hit button 10 times"
-    } 
-    
+  counterFunc(param:string) {
+    if(param == '+') {
+      ++this.counter;  
+    } else {
+      --this.counter;  
+    }
+      
+  }
+
+  startCounter() {
+    const int = setInterval( () => {
+      if(this.timer == 0) {
+        this.timer = 0;
+        clearInterval(int);
+        this.timerMsg = "Time out";
+      } else {
+        --this.timer;
+      }
+      
+    }, 1000 );
   }
 }

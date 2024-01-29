@@ -7,6 +7,9 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { StrUtilityComponent } from './str-utility/str-utility.component';
+import { FormsModule } from '@angular/forms';
+import { DailyTaskListComponent } from './daily-task-list/daily-task-list.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { RegisterComponent } from './register/register.component';
     HomeComponent,
     NavbarComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    StrUtilityComponent,
+    DailyTaskListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form #taskList="ngForm" (ngSubmit)="sendData(taskList.value)">
+                <div class="form-group">
+                    <label for="">Task</label>
+                    <input type="text" ngModel name="task" class="form-control">
+                </div>
+                <button class="btn btn-success">
+                    Add Task 
+                </button>
+            </form>
+        </div>
+        <div class="col-md-12">
+            {{button}}
+            <ul *ngFor="let list of showList; let i = index">
+                <li>
+                    {{i}} - {{list.task}}  <button class="btn btn-danger" (click)="delete(i)">Delete</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
