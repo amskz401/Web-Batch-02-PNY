@@ -2,7 +2,7 @@
     <div class="row mt-5">
         <div class="col-md-12">
             <h1 class="text-center">Text Utility</h1>
-            <form #utilityForm="ngForm" (ngSubmit)="sendData(utilityForm)">
+            <form #utilityForm="ngForm" (ngSubmit)="sendData(utilityForm.value)">
                 <div class="form-group">
                     <label for="">Enter Text Below</label>
                     <textarea required="" (keyup)="getValue(strText.value)" #strText ngModel name="text_util" rows="10" class="form-control"></textarea>

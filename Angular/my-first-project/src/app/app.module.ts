@@ -8,7 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { StrUtilityComponent } from './str-utility/str-utility.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DailyTaskListComponent } from './daily-task-list/daily-task-list.component';
 
 @NgModule({
@@ -24,7 +24,8 @@ import { DailyTaskListComponent } from './daily-task-list/daily-task-list.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
