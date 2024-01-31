@@ -10,6 +10,9 @@ import { RegisterComponent } from './register/register.component';
 import { StrUtilityComponent } from './str-utility/str-utility.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DailyTaskListComponent } from './daily-task-list/daily-task-list.component';
+import { MyPipePipe } from './pipes/my-pipe.pipe';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { DailyTaskListComponent } from './daily-task-list/daily-task-list.compon
     LoginComponent,
     RegisterComponent,
     StrUtilityComponent,
-    DailyTaskListComponent
+    DailyTaskListComponent,
+    MyPipePipe,
+    UserListComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,

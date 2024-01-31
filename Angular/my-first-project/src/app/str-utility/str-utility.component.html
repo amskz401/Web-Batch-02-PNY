@@ -10,7 +10,8 @@
                     Character Count: {{charCount}} | Word Count: {{wordCount}}
                 </div>
                 <button (click)="textToUpper(strText.value)">UpperCase</button>
-                <button [disabled]="utilityForm.invalid" (click)="textToLower(strText.value)">LowerCase</button>
+                <button (click)="textToLower(strText.value)">LowerCase</button>
+               
             </form>
             <h1>{{text}}</h1>
         </div>

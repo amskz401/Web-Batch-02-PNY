@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,17 +7,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  myEvent = new EventEmitter();
   title = 'my-first-project';
   counter = 0;
   succText = '';
   timer = 10;
   timerMsg = '';
+  myText = "";
   students = [
     {id: 1, name: "Jado"},
     {id: 2, name: "PNY"},
     {id: 3, name: "Multan"}
   ];
+
+  dateObj = Date.now();
   constructor() {
+    // this.myEvent.emit("triggerMyEvent");
+    
     // setTimeout(() => {
     //   this.timer = 15214;
     // }, 2000);
@@ -49,4 +55,6 @@ export class AppComponent {
       
     }, 1000 );
   }
+
+  
 }

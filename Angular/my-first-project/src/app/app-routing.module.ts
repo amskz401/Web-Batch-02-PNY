@@ -5,6 +5,8 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { StrUtilityComponent } from './str-utility/str-utility.component';
 import { DailyTaskListComponent } from './daily-task-list/daily-task-list.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 const routes: Routes = [
   {
@@ -24,6 +26,14 @@ const routes: Routes = [
   {
     path: 'daily-task',
     component: DailyTaskListComponent
+  },
+  {
+    path: "user-list",
+    component: UserListComponent
+  },
+  {
+    path: "user-details/:id",
+    component: UserDetailsComponent
   }
 ];
 
