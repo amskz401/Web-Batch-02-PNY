@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="mt-5 mb-5 border-bottom">Users List</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            *ngFor="
+              let u of usersList
+                | paginate : { itemsPerPage: 10, currentPage: p, totalItems: countUsers }
+            "
+          >
+            <th scope="row">{{ u.id }}</th>
+            <td>{{ u.name }}</td>
+            <td>{{ u.email }}</td>
+            <td>
+              <a href="" class="btn btn-primary"
+                ><i class="bi bi-pencil bi-edit"></i
+              ></a>
+              <a href="" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <pagination-controls (pageChange)="nextPage($event)"></pagination-controls>
+    </div>
+  </div>
+</div>

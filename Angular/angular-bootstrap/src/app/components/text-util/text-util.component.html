@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <h1>Ananlyze Your Text</h1>
+    <div class="col-md-6 mx-auto">
+      <form [formGroup]="textAnalyzer"></form>
+      <div class="form-group">
+        <textarea
+          name="myTextArea"
+          formControlName="myTextArea"
+          rows="6"
+          class="form-control"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary">Text To Upper</button>
+        <button class="btn btn-primary">Text To Lower</button>
+        <button class="btn btn-primary">Copy</button>
+        <button class="btn btn-primary">Download Text</button>
+        <button class="btn btn-primary">Text To Speak</button>
+        <button class="btn btn-danger" (click)="clearText()">Clear Text</button>
+      </div>
+    </div>
+  </div>
+</div>
