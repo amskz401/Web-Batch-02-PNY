@@ -1,0 +1,39 @@
+Performing CRUD
+
+1. connection string: mongodb://localhost:27017
+
+2. show dbs ==> list all databases
+
+3. use 2nd-batch-db1 ==> get into this database
+
+4. show collections ==> list all tables
+
+5. db.students.find() ==> list all records / documents
+
+6. db.students.insertOne( { title: "Farhan Khan" } )
+
+7. db.students.insertMany( [{ title: "Farhan Khan" }, {title: "Ahmad"}, {title: "Faizan"}] )
+
+UPDATE `students` SET `title`='Farhan Up' WHERE id = 1;
+
+8. db.students.updateOne(
+	{
+		_id: ObjectId('65d3276c7b26d6b2816432a4')
+	},
+	{
+		$set: {title: "Ahmad Up"}
+	}
+)
+
+9. db.students.updateMany(
+	{
+		title: "Farhan"
+	},
+	{
+		$set: {title: "Farhan 1"}
+	}
+)
+
+10. db.students.deleteOne({title: "Farhan"})
+
+11. db.students.deleteMany({title: "Farhan"})
