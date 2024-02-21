@@ -44,3 +44,46 @@ one/many
 	9.1 db.inventory.find({}, {size: true})
 	9.2 db.inventory.find({}, {size: true, _id: false})
 	9.3 db.inventory.find({}, {size: true, _id: false, qty: true})
+
+10. Conditional Operators (less, greater than, equal)
+	10.1 db.movies.find({"genres": "Comedy"}) // equal
+	10.2 db.movies.find({ "runtime": {$lt: 110} }) // less than 110 => 109
+	10.3 db.movies.find({ "runtime": {$lte: 110} }) // less than 110 => 110
+	10.4 db.movies.find({ "runtime": {$gt: 110} }) // less than 110 => 110
+	10.5 db.movies.find({ "runtime": {$gte: 110} }) // less than 110 => 110
+
+11. Unset Operator
+	db.movies.updateOne({_id: ObjectId('65d5c59987a2fee3b713bc21')}, {$unset: { type: "" } })
+
+12. IN Operator
+	db.movies.find( { rated: { $in: [ "PG", "PG-13" ] } } )
+
+13. Not Operator
+	db.movies.find({ runtime: {$not: { $gt: 50 }} })
+
+14. Aggregate Functions (count, sum, avg)
+	//find
+	db.movies.find({title: "Jurassic World: Fallen Kingdom"});
+
+	// match
+	db.movies.aggregate([{$match:{title: "Jurassic World: Fallen Kingdom"}}])
+
+	// match + count
+	db.movies.aggregate([{$match:{title: "Jurassic World: Fallen Kingdom"}},{$count: "total records are"}])
+
+	// group by 
+	db.movies.aggregate([{$group: {_id: '$runtime'}}])
+
+	// group by + count
+	db.movies.aggregate([{$group: {_id: '$runtime'}}, {$count: "total_records"}])
+
+	// group by + sum
+	db.movies.aggregate([
+	   {$match:{title: "Jurassic World: Fallen Kingdom"}},
+	   {
+	      $group: { _id: "$runtime", total: { $sum: "$runtime" } }
+	   }
+	])
+
+
+	
