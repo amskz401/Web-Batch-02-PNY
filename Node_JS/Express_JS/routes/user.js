@@ -1,46 +1,37 @@
 const express = require("express");
 const router = express.Router();
-const userModel = require("../server/userSchema");
+const user = require("../server/Controller/userController");
+
+// middleware
+const checkLogin = (req, res, next) => {
+
+    if(req.session.user) {
+
+        next();
+    } else {
+        res.redirect("/login");
+    }
+}
 
 router.get("/register", (req, res) => {
     res.render("register");
 });
 
-router.post("/register", (req, res) => {
-
-    const newUser = new userModel(req.body);
-    newUser.save().then( () => {
-        userModel.find({}).then( data => {
-            console.log(data);
-        } );
-        res.render("register", {msg: "User Registered"});
-    } );
-});
+router.post("/register", user.registerUser);
 
 router.get("/login", (req, res) => {
     res.render("login");
 });
 
 
-router.post("/login", (req, res) => {
-    
-    userModel.find(req.body).then( user => {
-        if(user.length > 0) {
-            console.log("here");
-            res.redirect("/dashboard");
-            return;
-            
-        } else {
+router.post("/login", user.loginUser);
 
-            res.render("login", {msg: "Invalid User/Password"});
-            return;
-        }
-    } );
+router.get("/dashboard", checkLogin, (req, res) => {
+    
+    res.render("dashboard");
 });
 
-router.get("/dashboard", (req, res) => {
-    res.render("dashboard");
-})
+router.get("/user-list", user.listUsers);
 
 
 

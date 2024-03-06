@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>User List</h1>
+            <table class="table table-stripe table-inverse">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% allUsers.forEach(user => { %>
+                    <tr>
+                        <td><%= user.full_name %></td>
+                        <td><%= user.email %></td>
+                        <td>
+                            <a href="/edit/<%= user._id %>" class="btn btn-primary"><i class="bi bi-pencil"></i></a>
+                            <a href="/delete/<%= user._id %>" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+                        </td>
+                    </tr><% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

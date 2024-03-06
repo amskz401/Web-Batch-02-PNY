@@ -1,5 +1,6 @@
 const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
+const session = require("express-session");
 require("./server/config");
 
 const app = express();
@@ -20,13 +21,28 @@ app.use(express.json());
 // local variables
 app.use( (req, res, next) => {
     app.locals = {
-        msg: ""
+        msg: "",
+        setUser: {id: 0, name: "Guest"}
     }
     next();
-} )
+} );
+
+// session management
+app.use(session({
+    secret: "userLogin",
+    name: "userLogin",
+    resave: true,
+    saveUninitialized: true,
+    cookie: {
+        maxAge: 1000 * 60 * 60 // 1 hour
+    }
+}));
 
 app.get("/", (req, res) => {
-    res.render("index");
+    data = {
+        id: 1, name: "Farhan"
+    };
+    res.render("index", data);
 });
 
 // user routes
