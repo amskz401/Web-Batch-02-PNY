@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="min-height: 100dvh;">
+	<button class="linkClass" id="linkClicked">
+		Click This Button1
+	</button>
+	<button class="linkClass" id="linkClicked2">
+		Click This Button2
+	</button>
+	<button class="linkClass" id="linkClicked3">
+		Click This Button3
+	</button>
+	<a href="https://www.javatpoint.com/javascript-events" class="linkClass">Link To Other Page</a>
+
+	<!-- <a href="https://www.javatpoint.com/javascript-events" class="linkClass" id="linkClicked" onclick="preCheck(this); return false;">Link To Other Page</a> -->
+	<form action="" method="post" id="myForm">
+		<input type="text" value="" name="email" id="email">
+		<input type="text" value="" name="first_name" id="first_name">
+		<input type="text" value="" name="username" id="username">
+		<input type="password" name="pass" id="pass">
+		<input type="submit" id="submitBTN" name="" value="submit">
+		<p id="message"></p>
+	</form>
+		<ul id="formValues">
+			
+		</ul>
+		<script type="text/javascript">
+
+		
+
+		// function mouseclicked() {
+		// 	alert("mouser event triggered");
+		// }
+
+		// function btnClicked(btn) {
+		// 	console.log(btn);
+		// }
+
+		// function preCheck(checkElement) {
+		// 	console.log(checkElement.getAttribute("class"));
+			
+		// 	// element.preventDefault();
+		// }
+
+		// let linkClicked = document.querySelectorAll("button");
+		// console.log(linkClicked);
+		// linkClicked.addEventListener("click", function(event){
+		// 	console.log(this);
+		// });
+
+	</script>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".linkClass").click(function(event) {
+				event.preventDefault();
+				console.log($(this).text("new text"));
+			});
+
+			$("#myForm").submit(function(event) {
+				event.preventDefault();
+				if($("#email").val() == '') {
+					$("#message").text("Email is required");
+					return false;
+				} else {
+					// $("#message").text("");
+				}
+
+				if($("#first_name").val() == '') {
+					$("#message").text("Frist Name is required");
+				} else {
+					$("#message").text("");
+				}
+				// setTimeout( () => {
+				// 	$("#message").text("Form Sumbited");
+				// 	$("#submitBTN").val("submit");
+				// }, 2000 );
+				/* Act on the event */
+
+				let form = "";
+				form += '<li>' + $("#email").val() + '</li>';
+				form += '<li>' + $("#first_name").val() + '</li>';
+				form += '<li>' + $("#username").val() + '</li>';
+				form += '<li>' + $("#pass").val() + '</li>';
+				$("#formValues").html(form);
+			});
+		});
+
+
+	</script>
+</body>
+</html>
+
+<?php 
+
+5 + 5;
+
+?>
